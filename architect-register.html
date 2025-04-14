@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Architect Registration - ArchiSphere</title>
+  <link rel="stylesheet" href="architect/styles.css" />
+</head>
+<body style="background-image: url('homepage/assets/arch.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed; margin: 0; font-family: sans-serif;">
+
+  <div class="container">
+    <h2 style="color:blue">ARCHITECT-REGISTRATION</h2>
+    <form action="register_architect.php" method="POST" enctype="multipart/form-data">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="confirm_password">Confirm Password</label>
+      <input type="password" id="confirm_password" name="confirm_password" required>
+
+      <label for="photo">Upload Photo</label>
+      <input type="file" id="photo" name="photo" accept="image/*" required>
+
+      <label for="district">Select Location</label>
+      <select id="district" name="district" required>
+        <option value="">-- Select Location --</option>
+        <option value="Kochi">Kochi</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Calicut">Calicut</option>
+      </select>
+
+      <label for="qualification">Qualifications</label>
+      <input type="text" id="qualification" name="qualification" required>
+
+      <label for="specialization">Specialization</label>
+      <select id="specialization" name="specialization" required>
+        <option value="">-- Select Specialization --</option>
+        <option value="Sustainable Architecture (LEED Certification)">Sustainable Architecture (LEED Certification)</option>
+        <option value="Urban Planning">Urban Planning</option>
+        <option value="Interior Design">Interior Design</option>
+        <option value="Landscape Architecture">Landscape Architecture</option>
+      </select>
+
+      <label for="experience">Years of Experience</label>
+      <input type="number" id="experience" name="experience" min="0" required>
+
+      <div class="button-group">
+        <button type="submit" class="submit-btn">Register</button>
+        <button type="button" class="back-btn" onclick="history.back()">Back</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
